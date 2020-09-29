@@ -11,9 +11,9 @@ public class Chapter2Test {
     for (int i = 0; i < 5; i++) {
       StopWatch sw = new StopWatch();
       sw.start();
-      Chapter2.memoize(x -> IntStream.range(0, 100).sum());
+      Integer output = Chapter2.memoize(x -> IntStream.range(0, 100).sum());
       sw.stop();
-      System.out.println(i + ":" + sw.getTotalTimeNanos());
+      System.out.println(i + ": output=" + output + ", time=" + sw.getTotalTimeNanos());
     }
   }
 
@@ -23,9 +23,9 @@ public class Chapter2Test {
     for (int i = 0; i < 5; i++) {
       StopWatch sw = new StopWatch();
       sw.start();
-      Integer memoize = Chapter2.memoize(x -> random.nextInt(50));
+      Integer output = Chapter2.memoize(x -> random.nextInt(50));
       sw.stop();
-      System.out.println(i + ":" + memoize + ":" + sw.getTotalTimeNanos());
+      System.out.println(i + ": output=" + output + ", time=" + sw.getTotalTimeNanos());
     }
   }
 
@@ -34,9 +34,9 @@ public class Chapter2Test {
     for (int i = 0; i < 5; i++) {
       StopWatch sw = new StopWatch();
       sw.start();
-      Integer memoize = Chapter2.memoize(x -> (int) (Math.random() * 100));
+      Integer output = Chapter2.memoize(x -> (int) (Math.random() * 100));
       sw.stop();
-      System.out.println(i + ":" + memoize + ":" + sw.getTotalTimeNanos());
+      System.out.println(i + ": output=" + output + ", time=" + sw.getTotalTimeNanos());
     }
   }
 }
