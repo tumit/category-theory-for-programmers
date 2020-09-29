@@ -6,8 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class CategoryTheoryForProgrammersApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(CategoryTheoryForProgrammersApplication.class, args);
-	}
-
+  public static void main(String[] args) {
+    SpringApplication.run(CategoryTheoryForProgrammersApplication.class, args);
+  }
 }
